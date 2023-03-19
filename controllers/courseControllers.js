@@ -149,8 +149,6 @@ export const deleteLecture = catchAsyncError(async (req, res, next) => {
 
   await course.save();
 
-  await course.deleteOne();
-
   res.status(200).json({
     success: true,
     message: "Lecture Deleted Successfully",
